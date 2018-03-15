@@ -1,4 +1,4 @@
-# HackerHub_WebApp
+# HackerHub WebApp
 The HackerHub website but in a web application form for Windows, macOS, and Linux  
 
 - These applications are also portable so you can put then on a USB Flash Drive and take them on the go  
