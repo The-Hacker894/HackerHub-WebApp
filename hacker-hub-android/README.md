@@ -4,4 +4,7 @@ Since you're a cool Android user you don't have to compile the app yourself like
 
 
 - [Instructables AAS Tutorial](http://www.instructables.com/id/How-To-Create-An-Android-App-With-Android-Studio/)
-- [Android App Basics](https://developer.android.com/training/basics/firstapp/index.html)
+- [Android App Basics](https://developer.android.com/training/basics/firstapp/index.html)  
+
+
+- When compiling the app make sure you make the target OS Android 4.4 (KitKat) or Android 5.0 (Lollipop)
