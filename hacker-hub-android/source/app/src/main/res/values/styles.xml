@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-   <!-- <style name="MyTheme" parent="android:Theme.Holo.Light">
+    <!-- <style name="MyTheme" parent="android:Theme.Holo.Light">
         <item name="actionButtonStyle">@style/MyActionButtonStyle</item>
     </style>
 
@@ -24,5 +24,9 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

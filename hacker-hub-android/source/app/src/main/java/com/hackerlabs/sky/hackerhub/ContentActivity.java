@@ -57,7 +57,7 @@ public class ContentActivity extends AppCompatActivity {
 
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
 
-                webView.loadUrl("file:///android_assets/error.html");
+                webView.loadUrl("https://hacker-hub.github.io/404.html");
 
             }
 

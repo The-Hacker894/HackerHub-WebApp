@@ -1,6 +1,7 @@
 package com.hackerlabs.sky.hackerhub;
 
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,9 +18,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
+import android.view.View.OnLongClickListener;
+import android.view.View.OnClickListener;
+import android.net.ConnectivityManager;
+import android.content.Context;
+import android.net.NetworkInfo;
+import android.widget.Toast;
+import android.widget.Button;
 
 
 public class HomeActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +37,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -41,13 +53,8 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
+  //  Button websiteButton = (Button) findViewById(R.id.Website_Button);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -67,8 +74,33 @@ public class HomeActivity extends AppCompatActivity {
         goToDiscordUrl ( "https://discordapp.com/invite/ASEPsVy");
     }
 
+   /* Button websiteButton = (Button) findViewById(R.id.Website_Button);
+
+    websiteButton.setOnLongClickListener(new OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View v) {
+            // TODO Auto-generated method stub
+            return true;
+        }
+    }); */
+
     public void goToWebsite (View view) {
-        startActivity(new Intent(HomeActivity.this, ContentActivity.class));
+        boolean connected = false;
+        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+            startActivity(new Intent(HomeActivity.this, ContentActivity.class));
+
+            connected = true;
+        }
+        else
+
+            Toast.makeText(this, "You need an Internet Connection for this!",
+                    Toast.LENGTH_LONG).show();
+
+        connected = false;
+
+
     }
 
     private void goToDiscordUrl (String url) {
