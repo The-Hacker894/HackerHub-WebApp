@@ -6,8 +6,8 @@ android {
         applicationId "com.hackerlabs.sky.hackerhub"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 6
-        versionName "3.0"
+        versionCode 7
+        versionName "3.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
