@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HackerHub</string>
+    <string name="action_settings">Settings</string>
+    <string name="hackerhub_desc">HackerHub is an app that showcases all of the apps I have published to Google Play.</string>
+    <string name="runrunrun_desc">RunRunRun is a WIP platformer made with Unity. At this moment in time it is extremely bare bones.</string>
+    <string name="amoledcalc_desc">AMOLED Calculator is a simple calculator app made just for phones with AMOLED displays.</string>
+    <string name="googleplay_button">View on Google Play Store</string>
+    <string name="website_button">Go to HackerHub Website</string>
+    <string name="hackerhubWeb_desc">HackerHub, the place home of the Sunset Discord Bots and much more!</string>
+</resources>

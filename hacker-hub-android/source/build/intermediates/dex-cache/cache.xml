@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/2a700979ed143529e90c7fa2ecf524de/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/transforms/preDex/release/6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/095728e5b4186cf65db618947c96827d/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a37fc31c5ceeaa4532a37358add1b189d8db4af1">
+        <dex dex="/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/transforms/preDex/release/1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/619cedec70d78b5d392030f27e8cb968/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/transforms/preDex/release/7.jar" />
+    </item>
+
+</items>
