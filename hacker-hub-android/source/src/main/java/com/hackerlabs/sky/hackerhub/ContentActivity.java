@@ -1,27 +1,35 @@
 package com.hackerlabs.sky.hackerhub;
 
 
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.view.Window;
-import android.view.WindowManager;
-import android.support.v7.widget.Toolbar;
-import android.view.InputEvent;
-import android.view.KeyEvent;
-import android.net.Uri;
+import android.content.ClipboardManager;
+import android.view.MenuInflater;
 
 
 
 public class ContentActivity extends AppCompatActivity {
 
+
+
     WebView webView;
     SwipeRefreshLayout swipe;
+    String PageURL, PageTitle ;
+    Context context = this;
+
 
 
     @Override
@@ -32,6 +40,16 @@ public class ContentActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
 
 
 
@@ -47,6 +65,39 @@ public class ContentActivity extends AppCompatActivity {
 
         WebAction();
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.webview_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                // User chose the "Settings" item, show the app settings UI...
+                return true;
+
+            case R.id.action_open_in:
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(PageURL));
+                startActivity(i);
+                return true;
+            case R.id.action_copy:
+                android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Message", PageURL);
+                clipboard.setPrimaryClip(clip);
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
+
+    }
+
     public void WebAction(){
 
         webView = (WebView) findViewById(R.id.webView);
@@ -54,6 +105,7 @@ public class ContentActivity extends AppCompatActivity {
         webView.getSettings().setAppCacheEnabled(true);
         webView.loadUrl("https://hacker-hub.github.io");
         swipe.setRefreshing(true);
+
         webView.setWebViewClient(new WebViewClient(){
 
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
@@ -65,10 +117,23 @@ public class ContentActivity extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 // do your stuff here
                 swipe.setRefreshing(false);
+
+                PageURL = view.getUrl();
+                PageTitle = view.getTitle();
+
+
+                getSupportActionBar().setTitle(Html.fromHtml("<small style='small{font-size: smaller;}'>" + PageTitle + "</small>"));
+              //  getSupportActionBar().setSubtitle(PageTitle);
+
+
             }
+
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
+
                 if(url.contains("hacker-hub.github.io")) {
+                    view.loadUrl(url);
+                } else if(url.contains("hacker-hub.com")) {
                     view.loadUrl(url);
                 } else {
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));

@@ -636,8 +636,16 @@
         "source": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable_ic_share_black_24dp.xml.flat",
+        "source": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/src/main/res/drawable/ic_share_black_24dp.xml"
+    },
+    {
         "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/color_abc_hint_foreground_material_light.xml.flat",
         "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/47bc19f69ee8e039d9493ef8261c1bf4/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable_ic_close_black_24dp.xml.flat",
+        "source": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/src/main/res/drawable/ic_close_black_24dp.xml"
     },
     {
         "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -812,6 +820,10 @@
         "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/47bc19f69ee8e039d9493ef8261c1bf4/res/layout/abc_screen_simple.xml"
     },
     {
+        "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/menu_webview_main.xml.flat",
+        "source": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/src/main/res/menu/webview_main.xml"
+    },
+    {
         "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/47bc19f69ee8e039d9493ef8261c1bf4/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -920,12 +932,12 @@
         "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/095728e5b4186cf65db618947c96827d/res/layout/design_layout_tab_icon.xml"
     },
     {
-        "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/layout_select_dialog_item_material.xml.flat",
-        "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/47bc19f69ee8e039d9493ef8261c1bf4/res/layout/select_dialog_item_material.xml"
-    },
-    {
         "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/layout_design_navigation_item_separator.xml.flat",
         "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/095728e5b4186cf65db618947c96827d/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/layout_select_dialog_item_material.xml.flat",
+        "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/47bc19f69ee8e039d9493ef8261c1bf4/res/layout/select_dialog_item_material.xml"
     },
     {
         "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -1464,6 +1476,10 @@
         "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/47bc19f69ee8e039d9493ef8261c1bf4/res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
+        "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable_ic_open_in_new_black_24dp.xml.flat",
+        "source": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/src/main/res/drawable/ic_open_in_new_black_24dp.xml"
+    },
+    {
         "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable-v21_avd_show_password.xml.flat",
         "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/095728e5b4186cf65db618947c96827d/res/drawable-v21/avd_show_password.xml"
     },
@@ -1758,6 +1774,10 @@
     {
         "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable_abc_spinner_textfield_background_material.xml.flat",
         "source": "/Users/skylarmccauley/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/47bc19f69ee8e039d9493ef8261c1bf4/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/drawable_ic_content_copy_black_24dp.xml.flat",
+        "source": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/src/main/res/drawable/ic_content_copy_black_24dp.xml"
     },
     {
         "merged": "/Users/skylarmccauley/AndroidStudioProjects/HackerHubNew/app/build/intermediates/res/merged/release/anim_tooltip_enter.xml.flat",
