@@ -1,6 +1,5 @@
 package com.hackerlabs.sky.hackerhub;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -19,27 +18,21 @@ import android.webkit.WebViewClient;
 import android.content.ClipboardManager;
 import android.view.MenuInflater;
 
-
-
-public class ContentActivity extends AppCompatActivity {
-
-
+public class AboutMe extends AppCompatActivity {
 
     WebView webView;
     SwipeRefreshLayout swipe;
     String PageURL, PageTitle ;
     Context context = this;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_content);
+        setContentView(R.layout.activity_about_me);
+
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
@@ -53,7 +46,7 @@ public class ContentActivity extends AppCompatActivity {
 
 
 
-    //    getActionBar().setIcon(R.mipmap.ic_exit_to_app_black_24dp);
+        //    getActionBar().setIcon(R.mipmap.ic_exit_to_app_black_24dp);
 
         swipe = (SwipeRefreshLayout)findViewById(R.id.swipe);
         swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -97,20 +90,19 @@ public class ContentActivity extends AppCompatActivity {
         }
 
     }
-
     public void WebAction(){
 
         webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setAppCacheEnabled(true);
-        webView.loadUrl("https://hacker-hub.github.io");
+        webView.loadUrl("https://skylarmccauley.hacker-hub.com/");
         swipe.setRefreshing(true);
 
         webView.setWebViewClient(new WebViewClient(){
 
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
 
-                webView.loadUrl("https://hacker-hub.github.io/404.html");
+                webView.loadUrl("https://skylarmccauley.hacker-hub.com/404.html");
 
             }
 
@@ -123,7 +115,7 @@ public class ContentActivity extends AppCompatActivity {
 
 
                 getSupportActionBar().setTitle(Html.fromHtml("<small style='small{font-size: smaller;}'>" + PageTitle + "</small>"));
-              //  getSupportActionBar().setSubtitle(PageTitle);
+                //  getSupportActionBar().setSubtitle(PageTitle);
 
 
             }
@@ -131,13 +123,8 @@ public class ContentActivity extends AppCompatActivity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
-                if(url.contains("hacker-hub.github.io")) {
+                if(url.contains("hacker-hub.com")) {
                     view.loadUrl(url);
-                } else if(url.contains("hacker-hub.com")) {
-                    view.loadUrl(url);
-                } else if(url.contains("donate")){
-                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                    startActivity(i);
                 } else {
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(i);
@@ -163,11 +150,10 @@ public class ContentActivity extends AppCompatActivity {
     public boolean onKeyLongPress(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK)
         {
-            startActivity(new Intent(ContentActivity.this, HomeActivity.class));
+            startActivity(new Intent(AboutMe.this, HomeActivity.class));
 
             return true;
         }
         return super.onKeyLongPress(keyCode, event);
     }
-
 }

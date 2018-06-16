@@ -27,6 +27,7 @@ import android.widget.Toast;
 import android.widget.Button;
 
 
+
 public class HomeActivity extends AppCompatActivity {
 
 
@@ -71,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void gotoDiscord (View view) {
-        goToDiscordUrl ( "https://discordapp.com/invite/ASEPsVy");
+        goToUrl ( "https://discordapp.com/invite/ASEPsVy");
     }
 
    /* Button websiteButton = (Button) findViewById(R.id.Website_Button);
@@ -103,36 +104,50 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    private void goToDiscordUrl (String url) {
+    public void goToAboutMe (View view) {
+        boolean connected = false;
+        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+            startActivity(new Intent(HomeActivity.this, AboutMe.class));
+
+            connected = true;
+        }
+        else
+
+            Toast.makeText(this, "You need an Internet Connection for this!",
+                    Toast.LENGTH_LONG).show();
+
+        connected = false;
+
+
+    }
+    public void goToProjects (View view) {
+        boolean connected = false;
+        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+            startActivity(new Intent(HomeActivity.this, Projects.class));
+
+            connected = true;
+        }
+        else
+
+            Toast.makeText(this, "You need an Internet Connection for this!",
+                    Toast.LENGTH_LONG).show();
+
+        connected = false;
+
+
+    }
+
+    private void goToUrl (String url) {
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
-    public void goToHHGP (View view) {
-        goToHHGPUrl ( "https://play.google.com/store/apps/details?id=com.hackerlabs.sky.hackerhub");
-    }
-
-    private void goToHHGPUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
-    }
 
 
-    private void goToRRRGPUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
-    }
 
-    public void goToACGP (View view) {
-        goToACGPUrl ( "https://play.google.com/store/apps/details?id=com.hackerlabs.sky.amoledcalculator");
-    }
-
-    private void goToACGPUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
-    }
 
 }
